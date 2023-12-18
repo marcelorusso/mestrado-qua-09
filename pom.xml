@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>mestrado.ipt.br</groupId>
+	<artifactId>mestrado.ipt.br.qualidade.teste</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>artigo-teste</name>
+	<packaging>jar</packaging>
+
+	<properties>
+		<java.version>19</java.version>
+		<maven.compiler.source>19</maven.compiler.source>
+		<maven.compiler.target>19</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+            <groupId>org.junit</groupId>
+            <artifactId>junit-bom</artifactId>
+            <version>5.10.1</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+                <properties>
+                    <configurationParameters>
+                        junit.jupiter.conditions.deactivate = *
+                        junit.jupiter.extensions.autodetection.enabled = true
+                        junit.jupiter.testinstance.lifecycle.default = per_class
+                    </configurationParameters>
+                </properties>
+            </configuration>
+        </plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<version>1.15.2</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.pitest</groupId>
+						<artifactId>pitest-junit5-plugin</artifactId>
+						<version>1.2.1</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>pit-report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>mutationCoverage</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

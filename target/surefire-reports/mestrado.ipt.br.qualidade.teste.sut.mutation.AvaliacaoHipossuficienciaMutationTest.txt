@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: mestrado.ipt.br.qualidade.teste.sut.mutation.AvaliacaoHipossuficienciaMutationTest
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s -- in mestrado.ipt.br.qualidade.teste.sut.mutation.AvaliacaoHipossuficienciaMutationTest
