@@ -8,14 +8,17 @@ import mestrado.ipt.br.qualidade.teste.impl.AvaliacaoHipossuficiencia;
 public class ExemploUIController {
 
 	// Propriedades referentes a atendimento excepcional
+	// Mapeado por meio de componente html select ou radio
 	public boolean isViolenciaDomestica = Boolean.FALSE;
 	public boolean isDefesaCriminal = Boolean.FALSE;
 	public boolean isCuradoria = Boolean.FALSE;
 
+	// Mapeado por meio de componente html textbox
 	public BigDecimal rendaFamiliar;
 	public int quantidadeMembros;
 
 	// Propriedades referente a condições especiais
+	// Mapeado por meio de componente htmt checkbox
 	public boolean possuiGastosMedicosMedicamentos = Boolean.FALSE;
 	public boolean possuiPessoaComTGD = Boolean.FALSE;
 	public boolean possuiPessoaIdosaEgressaPrisional = Boolean.FALSE;
